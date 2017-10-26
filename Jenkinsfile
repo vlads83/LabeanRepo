@@ -7,7 +7,7 @@ node('master'){
     //clean up work space
     step([$class: 'WsCleanup'])
     env.GIT_REPO_URL = 'https://github.com/vlads83/LabeanRepo.git'
-    echo "Detected Git Repo URL: ${env.GIT_REPO_URL} , branch : ${env.BRANCH_NAME} , committer : ${GIT_COMMITTER_NAME}"
+    echo "Detected Git Repo URL: ${env.GIT_REPO_URL} , branch : ${env.BRANCH_NAME} , committer : ${GIT_COMMIT}"
       sh ("printenv")    
 } 
       
