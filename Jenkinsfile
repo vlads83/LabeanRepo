@@ -17,8 +17,6 @@ node('master'){
         my_check.assertCondition(first_checkout_result["GIT_COMMITTER_EMAIL"] == this_result["GIT_COMMITTER_EMAIL"], first_checkout_result["GIT_COMMITTER_EMAIL"] + " != " + this_result["GIT_COMMITTER_EMAIL"])
         my_check.assertCondition(first_checkout_result["GIT_AUTHOR_NAME"] == this_result["GIT_AUTHOR_NAME"], first_checkout_result["GIT_AUTHOR_NAME"] + " != " + this_result["GIT_AUTHOR_NAME"])
         my_check.assertCondition(first_checkout_result["GIT_AUTHOR_EMAIL"] == this_result["GIT_AUTHOR_EMAIL"], first_checkout_result["GIT_AUTHOR_EMAIL"] + " != " + this_result["GIT_AUTHOR_EMAIL"])
-      }
-
     env.GIT_REPO_URL = 'https://github.com/vlads83/LabeanRepo.git'
     echo "Detected Git Repo URL: ${env.GIT_REPO_URL} , branch : ${env.BRANCH_NAME} , committer : ${GIT_AUTHOR_EMAIL}"
       sh ("printenv")    
