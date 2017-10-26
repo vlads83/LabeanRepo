@@ -3,6 +3,8 @@
 import jenkins.model.Jenkins
 import hudson.model.*
 import groovy.json.*
+import com.markwaite.Assert
+import com.markwaite.Build
 node('master'){
     //clean up work space
     step([$class: 'WsCleanup'])
